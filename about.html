@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Egyptian Heritage</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@300;400;700&family=Noto+Kufi+Arabic:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="louvre-nav">
+            <!-- Top Bar -->
+            <div class="header-top">
+                <div class="nav-left">
+                    <button class="search-trigger" onclick="document.querySelector('.search-input').focus()">
+                        <i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="search">Search</span>
+                    </button>
+                    <!-- Search Input -->
+                    <div class="search-container" style="display:inline-block; margin-left:10px;">
+                        <input type="text" class="search-input" placeholder="Search..."
+                            data-i18n-placeholder="search_placeholder">
+                    </div>
+
+                    <div class="lang-dropdown-container">
+                        <button id="lang-toggle" class="lang-trigger">
+                            <i class="fa-solid fa-globe"></i> <span class="lang-text">English</span> <i
+                                class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 5px;"></i>
+                        </button>
+                        <ul class="lang-menu">
+                            <li><a href="#" data-lang="en">English</a></li>
+                            <li><a href="#" data-lang="ar">العربية</a></li>
+                            <li><a href="#" data-lang="es">Español</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="index.html" class="logo">
+                    <span>EGYPTIAN</span> HERITAGE
+                </a>
+
+                <div class="nav-right">
+                    <button id="theme-toggle" class="btn-nav btn-nav-outline" title="Toggle Theme"
+                        style="padding: 8px;">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <a href="periods.html" class="btn-nav btn-nav-solid">
+                        <i class="fa-solid fa-compass"></i> <span data-i18n="btn_explore">Explore</span>
+                    </a>
+                    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="header-bottom">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li>
+                        <a href="periods.html" data-i18n="nav_periods">Historical Eras <i
+                                class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="periods.html#ancient_egypt">Ancient Egypt</a></li>
+                            <li><a href="periods.html#ptolemaic">Ptolemaic Era</a></li>
+                            <li><a href="periods.html#coptic">Coptic Era</a></li>
+                            <li><a href="periods.html#islamic">Islamic Era</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="types.html" data-i18n="nav_sites">Site Types <i class="fa-solid fa-chevron-down"
+                                style="font-size: 0.7em; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="types.html#temples">Temples</a></li>
+                            <li><a href="types.html#tombs">Tombs & Mastabas</a></li>
+                            <li><a href="types.html#museums">Museums</a></li>
+                            <li><a href="types.html#pyramids">Pyramids</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" data-i18n="nav_about">About Project</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header"
+        style="background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url('images/hero_bg.jpg') center/cover; padding: 12rem 0 8rem;">
+        <div class="container text-center">
+            <h1 data-i18n="about_title" style="color: #FFF; font-size: 4rem; letter-spacing: 4px;">About Egyptian
+                Heritage</h1>
+            <div class="separator"></div>
+            <p data-i18n="about_subtitle"
+                style="color: rgba(255,255,255,0.8); font-size: 1.2rem; max-width: 700px; margin: 0 auto; font-family: 'Lora', serif; font-style: italic;">
+                Preserving Egypt's legacy through digital documentation and academic research</p>
+        </div>
+    </header>
+
+    <!-- Mission Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="about_mission_title">Our Mission</h2>
+                <div class="separator"></div>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <p data-i18n="about_mission_text"
+                    style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-light);">
+                    The Egyptian Heritage project is dedicated to creating a comprehensive digital archive of Egypt's
+                    rich archaeological and historical legacy. We aim to make this invaluable knowledge accessible to
+                    researchers, students, and heritage enthusiasts worldwide through meticulous documentation,
+                    scholarly research, and innovative digital presentation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="section bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="about_overview_title">Project Overview</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-content text-center">
+                        <i class="fa-solid fa-database"
+                            style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                        <h3 data-i18n="about_feature1_title">Comprehensive Database</h3>
+                        <p data-i18n="about_feature1_desc">Detailed documentation of archaeological sites, monuments,
+                            and artifacts across all historical periods of Egypt.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content text-center">
+                        <i class="fa-solid fa-book-open"
+                            style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                        <h3 data-i18n="about_feature2_title">Academic Research</h3>
+                        <p data-i18n="about_feature2_desc">Scholarly articles, research papers, and educational
+                            resources based on verified historical sources.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content text-center">
+                        <i class="fa-solid fa-users"
+                            style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                        <h3 data-i18n="about_feature3_title">Community Access</h3>
+                        <p data-i18n="about_feature3_desc">Free access to knowledge for students, researchers, and
+                            anyone passionate about Egyptian history.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="about_method_title">Our Methodology</h2>
+                <div class="separator"></div>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <p data-i18n="about_method_text"
+                    style="line-height: 1.8; color: var(--color-text-light); margin-bottom: 2rem;">
+                    Our research and documentation process follows rigorous academic standards. We rely on peer-reviewed
+                    archaeological reports, historical texts, museum catalogs, and field research conducted by
+                    recognized institutions. All information is cross-referenced and verified before publication.
+                </p>
+                <div class="arch-grid" style="grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+                    <div class="arch-info">
+                        <h4 data-i18n="about_method1_title"><i class="fa-solid fa-check-circle"
+                                style="color: var(--color-primary);"></i> Source Verification</h4>
+                        <p data-i18n="about_method1_desc">All data verified against multiple academic sources</p>
+                    </div>
+                    <div class="arch-info">
+                        <h4 data-i18n="about_method2_title"><i class="fa-solid fa-check-circle"
+                                style="color: var(--color-primary);"></i> Bilingual Documentation</h4>
+                        <p data-i18n="about_method2_desc">Content available in Arabic and English</p>
+                    </div>
+                    <div class="arch-info">
+                        <h4 data-i18n="about_method3_title"><i class="fa-solid fa-check-circle"
+                                style="color: var(--color-primary);"></i> Regular Updates</h4>
+                        <p data-i18n="about_method3_desc">Continuous integration of new research findings</p>
+                    </div>
+                    <div class="arch-info">
+                        <h4 data-i18n="about_method4_title"><i class="fa-solid fa-check-circle"
+                                style="color: var(--color-primary);"></i> Open Access</h4>
+                        <p data-i18n="about_method4_desc">Free knowledge for educational purposes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer - Louvre Style Redesign -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Top Section: Columns -->
+            <div class="footer-top">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a href="about.html#mission">Mission & Vision</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="team.html">Team</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Quick Links -->
+                    <div class="footer-col">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="periods.html">Historical Eras</a></li>
+                            <li><a href="types.html">Site Types</a></li>
+                            <li><a href="about.html">About Project</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Follow Us -->
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="footer-socials">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Legal & Logo -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookies.html">Cookies Policy</a>
+                    <a href="terms.html">Copyright & Terms</a>
+                </div>
+
+                <div class="footer-bottom-logo">
+                    EGYPTIAN HERITAGE
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Back to Top" data-i18n-title="back_to_top"
+        style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</body>
+
+</html>

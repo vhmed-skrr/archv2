@@ -1,0 +1,17 @@
+{
+    "name": "egyptian-heritage",
+    "version": "1.0.0",
+    "description": "Egyptian Heritage Website with Decap CMS",
+    "main": "index.html",
+    "scripts": {
+        "build": "node scripts/generate_index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "front-matter": "^4.0.2",
+        "marked": "^11.1.0",
+        "clean-css-cli": "^5.6.3",
+        "terser": "^5.27.0",
+        "ncp": "^2.0.0"
+    }
+}

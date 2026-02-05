@@ -1,0 +1,9 @@
+# Netlify Redirects
+# Only redirect 404 errors to custom 404 page
+# DO NOT redirect CSS, JS, or other assets!
+
+# Admin panel SPA routing
+/admin/*  /admin/index.html  200
+
+# Custom 404 page (only for pages that don't exist)
+# This should be LAST and will only trigger for actual 404s

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Era Overview | Egyptian Heritage</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@300;400;700&family=Noto+Kufi+Arabic:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="louvre-nav">
+            <!-- Top Bar -->
+            <div class="header-top">
+                <div class="nav-left">
+                    <button class="search-trigger" onclick="document.querySelector('.search-input').focus()">
+                        <i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="search">Search</span>
+                    </button>
+                    <!-- Search Input (Hidden by default, expands on click - handled by CSS/JS) -->
+                    <div class="search-container" style="display:inline-block; margin-left:10px;">
+                        <input type="text" class="search-input" placeholder="Search..."
+                            data-i18n-placeholder="search_placeholder">
+                    </div>
+
+                    <div class="lang-dropdown-container">
+                        <button id="lang-toggle" class="lang-trigger">
+                            <i class="fa-solid fa-globe"></i> <span class="lang-text">English</span> <i
+                                class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 5px;"></i>
+                        </button>
+                        <ul class="lang-menu">
+                            <li><a href="#" data-lang="en">English</a></li>
+                            <li><a href="#" data-lang="ar">العربية</a></li>
+                            <li><a href="#" data-lang="es">Español</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="index.html" class="logo">
+                    <span>EGYPTIAN</span> HERITAGE
+                </a>
+
+                <div class="nav-right">
+                    <button id="theme-toggle" class="btn-nav btn-nav-outline" title="Toggle Theme"
+                        style="padding: 8px;">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <a href="periods.html" class="btn-nav btn-nav-solid">
+                        <i class="fa-solid fa-compass"></i> <span data-i18n="btn_explore">Explore</span>
+                    </a>
+                    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="header-bottom">
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li>
+                        <a href="periods.html" data-i18n="nav_periods">Historical Eras <i
+                                class="fa-solid fa-chevron-down" style="font-size: 0.7em; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="periods.html#ancient_egypt">Ancient Egypt</a></li>
+                            <li><a href="periods.html#ptolemaic">Ptolemaic Era</a></li>
+                            <li><a href="periods.html#coptic">Coptic Era</a></li>
+                            <li><a href="periods.html#islamic">Islamic Era</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="types.html" data-i18n="nav_sites">Site Types <i class="fa-solid fa-chevron-down"
+                                style="font-size: 0.7em; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="types.html#temples">Temples</a></li>
+                            <li><a href="types.html#tombs">Tombs & Mastabas</a></li>
+                            <li><a href="types.html#museums">Museums</a></li>
+                            <li><a href="types.html#pyramids">Pyramids</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" data-i18n="nav_about">About Project</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Main Title & Hero -->
+    <header class="era-header">
+        <div class="overlay"></div>
+        <div class="container text-center relative">
+            <h1 id="era-title">Loading...</h1>
+            <p id="era-subtitle" class="era-subtitle">...</p>
+        </div>
+    </header>
+
+    <!-- 2. General Overview (Context Grid) -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="era_overview_title">General Overview</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="context-grid">
+                <div class="context-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <h3 data-i18n="ctx_time">Time Period</h3>
+                    <p id="ctx-time">...</p>
+                </div>
+                <!-- Political -->
+                <div class="context-card">
+                    <i class="fa-solid fa-crown"></i>
+                    <h3 data-i18n="ctx_pol">Political Context</h3>
+                    <p id="ctx-pol">...</p>
+                </div>
+                <!-- Social -->
+                <div class="context-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3 data-i18n="ctx_soc">Social Context</h3>
+                    <p id="ctx-soc">...</p>
+                </div>
+                <!-- Religious -->
+                <div class="context-card">
+                    <i class="fa-solid fa-hands-praying"></i>
+                    <h3 data-i18n="ctx_rel">Religious Context</h3>
+                    <p id="ctx-rel">...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Internal Division (Sub-periods) -->
+    <section class="section bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="era_subs_title">Internal Divisions</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="sub-periods-list" id="sub-periods-container">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Architecture & Art -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="era_arch_title">Architecture & Art</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="arch-grid">
+                <div class="arch-info">
+                    <h4 data-i18n="arch_mat">Materials</h4>
+                    <p id="arch-mat">...</p>
+                </div>
+                <div class="arch-info">
+                    <h4 data-i18n="arch_style">Style & Characteristics</h4>
+                    <p id="arch-style">...</p>
+                </div>
+                <div class="arch-info">
+                    <h4 data-i18n="arch_func">Primary Functions</h4>
+                    <p id="arch-func">...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Site Types -->
+    <section class="section bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="era_types_title">Archaeological Sites</h2>
+            </div>
+            <div class="grid-3" id="era-types-grid">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 7. Catalog Access -->
+    <section class="section community-section">
+        <div class="container text-center">
+            <h2 data-i18n="era_catalog_title">Explore the Catalog</h2>
+            <p data-i18n="era_catalog_desc">Browse all archived sites belonging to this era.</p>
+            <a href="#" id="catalog-link" class="btn btn-community">View All Sites</a>
+        </div>
+    </section>
+
+    <!-- 8. References -->
+    <section class="section">
+        <div class="container">
+            <h4 data-i18n="references_title" style="color: var(--color-text-light);">References & Sources</h4>
+            <ul id="ref-list" class="ref-list">
+                <!-- Dynamic -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer - Louvre Style Redesign -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Top Section: Columns -->
+            <div class="footer-top">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a href="about.html#mission">Mission & Vision</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="team.html">Team</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Quick Links -->
+                    <div class="footer-col">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="periods.html">Historical Eras</a></li>
+                            <li><a href="types.html">Site Types</a></li>
+                            <li><a href="about.html">About Project</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Follow Us -->
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="footer-socials">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Legal & Logo -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookies.html">Cookies Policy</a>
+                    <a href="#">Copyright & Terms</a>
+                </div>
+
+                <div class="footer-bottom-logo">
+                    EGYPTIAN HERITAGE
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Back to Top" data-i18n-title="back_to_top"
+        style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</body>
+
+</html>
